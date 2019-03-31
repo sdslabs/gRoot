@@ -1,5 +1,7 @@
 # gRoot
 
+> For when you need a friend with root access.
+
 ## Contents
 
 * [What is gRoot?](#what)
