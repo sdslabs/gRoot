@@ -1,0 +1,28 @@
+{
+  "name": "groot",
+  "version": "1.0.0",
+  "description": "I am groot",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "src/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdslabs/gRoot.git"
+  },
+  "keywords": [
+    "gRoot",
+    "i",
+    "am",
+    "groot",
+    "I",
+    "am",
+    "groot"
+  ],
+  "author": "Groot",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/sdslabs/gRoot/issues"
+  },
+  "homepage": "https://github.com/sdslabs/gRoot#readme"
+}
