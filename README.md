@@ -1,7 +1,5 @@
 # gRoot
 
-SDSLabs in collaboration with Google present gRoot.
-
 ## Contents
 
 * [What is gRoot?](#what)
