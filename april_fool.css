@@ -1,0 +1,86 @@
+html,body {
+	width:100%;
+	position: relative;
+	background: #FFFFFF;
+}
+
+#comments {
+
+font-family: Righteous;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+margin-top: 50px;
+text-align: center;
+color: #2D2D2D;
+
+}
+
+#com {
+
+font-family: Righteous;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+margin-top: 50px;
+text-align: center;
+color: #2D2D2D;
+
+
+}
+
+#button {
+	
+	height: 200px;
+  	width: 200px;
+  	position: absolute;
+  	top: 50vh;
+  	left: 50vw;
+  	margin-top: -200px;
+  	margin-left: -100px;
+  	border-radius: 50%;
+  	font-family: Righteous;
+    background: linear-gradient(126.66deg, #EEE84F -11.37%, rgba(255, 149, 24, 0.4) 150.19%);
+}
+
+
+#farhan_container{
+  z-index: 9999;
+}
+
+#akhtar_left {
+  width: 50vw;
+  position: fixed;
+  top: 0;
+  left: -60vw;
+  z-index: 9990;
+  border-bottom: 100vh solid #141414;
+  border-right:5vw solid transparent;
+  transition: all 1s ease-out;
+  transition-delay: 1.25s;
+}
+
+#akhtar_right {
+  width: 50vw;
+  position: fixed;
+  bottom: 0;
+  right: -60vw;
+  z-index: 9990;
+  border-top: 100vh solid #141414;
+  border-left:5vw solid transparent;
+  transition: all 1s ease-out;
+  transition-delay: 1.25s;
+}
+
+#fabtopper_loader {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -211px;
+  margin-left: -217px;
+  z-index: -1000;
+  opacity: 0;
+  display: inline-block;
+  transition: all 1s ease-out;
+
+}
