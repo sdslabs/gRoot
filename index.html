@@ -1,105 +1,146 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Some interesting title</title>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
 
-<style>
-    body,html{
-        padding: 0;
-        margin:0;
-        background-color: #000098;
-        color: yellow;
-        font-family: 'Comic Sans MS';
-    }
-    #content{
-        text-align: center;
-        position: absolute;
-        top: 40%;
-        margin-top: -150px;
-        width: 100vw;
-        font-family: 'Comic Sans MS';
-    }
-    #img{
-        height: 300px;
-        width: 300px;
-        border: 1px solid black;
-        display: inline-block;
-    }
-    marquee{
-        font-size:50px;
-        margin-top: 30px;
-        font-family: 'Comic Sans MS';
-    }
-    .star{
-        height:200px;
-        width:200px;
-    }
-    #stars{
-        position:absolute;
-        display:inline-block;
-        bottom:30px;
-        width:100vw;
-        height:200px;
-        padding:0;
-        margin:0;
-        text-align:center;
-    }
-    input{
-        font-family: 'Comic Sans MS';
-    }
-    .button{
-        text-decoration:underline;
-        cursor:pointer;
-        border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
-        border-style: solid;
-        border-width: 10px;
-        color: 000098;
-        font-size:30px;
-    }
-    .button:hover{
-        color: yellow;
-    }
-</style>
+    <style>
+        @font-face {
+            font-family: 'Comic Sans';
+            src: url('comic-sans.woff') format('woff')
+        }
+        
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            background-color: #000098;
+            color: yellow;
+            font-family: 'Comic Sans';
+        }
+        
+        section#description {
+            text-align: center;
+        }
+        
+        #content {
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            margin-top: -150px;
+            width: 100vw;
+            font-family: 'Comic Sans';
+        }
+        
+        #img {
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        
+        marquee {
+            font-size: 50px;
+            margin-top: 30px;
+            font-family: 'Comic Sans';
+        }
+        
+        .star {
+            height: 200px;
+            width: 200px;
+        }
+        
+        #stars {
+            position: absolute;
+            display: inline-block;
+            bottom: 30px;
+            width: 100vw;
+            height: 200px;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        
+        input {
+            font-family: 'Comic Sans';
+        }
+        
+        .button {
+            text-decoration: underline;
+            cursor: pointer;
+            border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+            border-style: solid;
+            border-width: 10px;
+            color: 000098;
+            font-size: 30px;
+        }
+        
+        .button:hover {
+            color: yellow;
+        }
+    </style>
 </head>
+
 <body>
-    <div id="stars"></div>
-    <marquee behaviour="alternate" scrollamount=50>BABA JI KI JA HO</marquee>
-    <form id="content">
-    <img id="img" align="middle" style="color:000098" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'"/><br><br>
-    <input id="up" type="file" class="button"/><br><br>
+    <section id="description">
+        <header>
+            <div class="info-cringe">
+                <img src="/fireball.gif" class="flip-vertical-axis">
+                <img src="/title.gif">
+                <img src="/fireball.gif">
+            </div>
+        </header>
+        <p>
+            Hi! We are SDSLabs. You might be knowing of us as Software Development Section but lowkey we actually are Sanatan Dharmi Sangh.
+        </p>
+        <p>
+            We are a wannabe start-up that helps you become rich at the comfort of your home. Nope, you don't need to marry a nigerian prince/princess.
+        </p>
+        <p>
+            We crunched the numbers and analyzed the flow of economy to create this revolutionary app.
+        </p>
+        <p>
+            You can upload your photo and we will check if you had a rich ancestor.
+        </p>
+        <button id="goToUpload">I want to be rich</button>
+    </section>
 
-        <input type="text" placeholder="Name"/><br><br>
-        <input type='submit' class="button"/>
-</form>
-<script>
-	var up = document.getElementById('up');
-	up.onchange = function(){
-		var image = up.files[0];
-		console.log(image);
-		var reader = new FileReader();
-		reader.onloadend = function(){
-			console.log(reader.result);
-			img = document.getElementById('img');
-			img.src= reader.result;  //read.result contains the base64 code. Voh seedha src me laga ke bhi chal jata hai.Isko variable me store karva ke send kar de server side
-			//var li = document.createElement('li');
-			//preview ke liye canvas use kar le,it'll be much more efficient
-			//li.appendChild(img);
-			//document.getElementById('list').appendChild(li);
-		}
-		reader.readAsDataURL(image); //this reads the base64 of the image. Iske upar vala block iske baad execute hota hai
+    <section id="imageUpload">
+        <div id="stars"></div>
+        <marquee behaviour="alternate" scrollamount=50>BABA JI KI JA HO</marquee>
+        <form id="content">
+            <img id="img" align="middle" style="color:000098" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'" /><br><br>
+            <input id="up" type="file" class="button" /><br><br>
 
-	}
-    var y=document.getElementById('stars');
-    var a= window.innerWidth/200;
-    a=parseInt(a);
-    var star = '<img class="star" src="https://thumbs.gfycat.com/GlassWellgroomedIndri.webp">';
-    
-    for(i=0;i<a;i++){
-        y.innerHTML+=star;
-    }
+            <input type="text" placeholder="Name" /><br><br>
+            <input type='submit' class="button" />
+        </form>
+    </section>
+    <script>
+        var up = document.getElementById('up');
+        up.onchange = function() {
+            var image = up.files[0];
+            console.log(image);
+            var reader = new FileReader();
+            reader.onloadend = function() {
+                console.log(reader.result);
+                img = document.getElementById('img');
+                img.src = reader.result;
+            }
+            reader.readAsDataURL(image);
 
-</script>
+        }
+        var y = document.getElementById('stars');
+        var a = window.innerWidth / 200;
+        a = parseInt(a);
+        var star = '<img class="star" src="https://thumbs.gfycat.com/GlassWellgroomedIndri.webp">';
+
+        for (i = 0; i < a; i++) {
+            y.innerHTML += star;
+        }
+    </script>
 </body>
+
 </html>
