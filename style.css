@@ -48,11 +48,14 @@ html {
     margin-bottom: 4rem;
     cursor: pointer;
     overflow: hidden;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .info {
     padding: 2rem;
-    background: rgba(251, 48, 54, 0.5);
+    background: rgba(251, 48, 54, 0.7);
     color: #FFF;
     height: 100%;
     width: 100%;
@@ -72,4 +75,8 @@ h1 {
 
 p {
     line-height: 1.5;
+}
+
+#gRoot {
+    background: url(./assets/gRoot.png);
 }
