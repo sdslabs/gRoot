@@ -1,6 +1,11 @@
-fn main() {
-    // The statements here will be executed when the compiled binary is called
-
-    // Print text to the console
-    println!("Hello World!");
+using System;
+namespace IAmGRoot
+{
+    class GRoot 
+    {
+        static void Main() 
+        {
+            Console.WriteLine("I am gRoot");
+        }
+    }
 }
