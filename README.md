@@ -1,8 +1,24 @@
+# gRoot
+
+SDSLabs in collaboration with Google present gRoot.
+
 ## Contents
 
 * [What is gRoot?](#what)
 * [Why is gRoot?](#why)
 * [How to use gRoot?](#setup)
+	* [C](./src/main.c)
+	* [C++](./src/main.cpp)
+	* [C#](./src/main.cs)
+	* [Go](./src/main.go)
+	* [Java](./src/main.java)
+	* [JavaScript](./src/main.js)
+	* [Kotlin](./src/main.kt)
+	* [Lua](./src/main.lua)
+	* [PHP](./src/main.php)
+	* [Python](./src/main.py)
+	* [Rust](./src/main.rs)
+	* [Shell](./src/main.sh)
 * [Contribution](#how)
 * [Remarks](#remarks)
 
@@ -66,7 +82,7 @@ I am gRoot
 > I am gRoot
 > I am gRoot
 
-<p align=center><img src="assets/gRoot.jpg"><p/>
+<p align=center><img src="assets/gRoot.jpg"></p>
 <p align=center>
 Created by SDSLabs with :stuck_out_tongue:
 </p>
