@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Charm');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+@keyframes slideInRight {
+	0% {
+		transform: translate(0%, 0%);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0.05%, 10%);
+		opacity: 1;
+	}
+}
+
+@keyframes slideInLeft {
+	0% {
+		transform: translate(100%, 0%);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0%, 0%);
+		opacity: 1;
+	}
+}
+
+body {
+	margin: 0px;
+	text-align: center;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.tictactoe {
+	text-align: center;
+}
+
+.header {
+	width: 100%;
+	padding: 2.5vh;
+	background: black;
+	color: white;
+
+	font-family: Lobster;
+	font-size: 2vw;
+	text-align: center;
+}
+
+.main {
+	padding: 1vw;
+}
+
+table {
+	display: inline-block;
+	border: none;
+	padding: 2vh;
+}
+
+table {
+	border-collapse:collapse;
+	align: center;
+	height: 70vh;
+}
+
+td {
+	/* background-color: white; */
+	/* border: 3px solid rgb(160, 79, 79); */
+	position: relative;
+	font-size:80px;
+	color:#ff0000;
+	border-radius: 10px 10px 10px 10px;
+	border: solid white;
+}
+
+.turn {
+	font-family: Satisfy;
+	font-size: 2vw;
+}
+
+.thug {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	width: 100%;
+	
+}
+#btn{
+	border-radius: 5px;
+	margin-top: 2px;
+	font-family: Dancing Script;
+	font-size: 30px;
+	padding-right: 3vh;
+	padding-left: 3vh;
+	box-shadow: 3px 5px #888888;
+	cursor: pointer;
+	background: #0336FF;
+	color: white;
+	font-weight: bold;
+}
+
+
+#r0c0img{
+	animation: slideInLeft 0.5s linear forwards;
+	animation-play-state:  paused;
+}
+
+#r4c4img{
+	animation: slideInLeft 0.5s linear forwards;
+	background-size: contain;
+	animation-play-state:  paused;
+}
+
