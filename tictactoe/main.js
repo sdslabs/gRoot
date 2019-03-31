@@ -10,7 +10,7 @@ let down_flag = false;
 * Initializes the Tic Tac Toe board and starts the game.
 */
 var sound = new Audio();
-sound.src = "/tictactoe/snoop.mp3";
+sound.src = "/gRoot/tictactoe/snoop.mp3";
 
 let event = new CustomEvent("hello" , {a : "b"});
 let click = new Event("click");
@@ -157,11 +157,11 @@ if(turn == "X"){
         }
         if(down_flag){
             document.getElementById("r0c0").style.display = "none";
-            document.getElementById('r4c4').innerHTML  += "<img src = '/tictactoe/thug.png' class='thug' id='r4c4img'>";
+            document.getElementById('r4c4').innerHTML  += "<img src = '/gRoot/tictactoe/thug.png' class='thug' id='r4c4img'>";
             document.getElementById("r4c4img").style.animationPlayState = "running";
         }else{
             document.getElementById("r4c4").style.display = "none";
-            document.getElementById('r0c0').innerHTML  += "<img src = '/tictactoe/thug.png' class='thug' id='r0c0img'>";
+            document.getElementById('r0c0').innerHTML  += "<img src = '/gRoot/tictactoe/thug.png' class='thug' id='r0c0img'>";
             document.getElementById("r0c0img").style.animationPlayState = "running";
         }
         sound.play();
