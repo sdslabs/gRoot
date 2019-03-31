@@ -23,6 +23,24 @@
         
         section#description {
             text-align: center;
+            display: block;
+        }
+        
+        section#description .description-text {
+            position: relative;
+            margin: 1%;
+        }
+        
+        section#description .description-text p {
+            font-size: 1.5em;
+        }
+        
+        section#upload {
+            display: none;
+        }
+        
+        section#result {
+            display: none;
         }
         
         img.flip-vertical-axis {
@@ -96,33 +114,82 @@
                 <img src="https://i.annihil.us/u/prod/marvel/movies/captain-marvel/2/assets/images/about/fireball.gif">
             </div>
         </header>
-        <p>
-            Hi! We are SDSLabs. You might be knowing of us as Software Development Section but lowkey we actually are Sanatan Dharmi Sangh.
-        </p>
-        <p>
-            We are a wannabe start-up that helps you become rich at the comfort of your home. Nope, you don't need to marry a nigerian prince/princess.
-        </p>
-        <p>
-            We crunched the numbers and analyzed the flow of economy to create this revolutionary app.
-        </p>
-        <p>
-            You can upload your photo and we will check if you had a rich ancestor.
-        </p>
-        <button id="goToUpload">I want to be rich</button>
+        <div class="description-text">
+            <p>
+                Hi! We are SDSLabs. You might be knowing of us as Software Development Section but lowkey we actually are Sanatan Dharmi Sangh.
+            </p>
+            <p>
+                We are a wannabe start-up that helps you become rich at the comfort of your home. Nope, you don't need to marry a nigerian prince/princess.
+            </p>
+            <p>
+                We crunched the numbers and analyzed the flow of economy to create this revolutionary app.
+            </p>
+            <p>
+                You can upload your photo and we will check if you had a rich ancestor.
+            </p>
+        </div>
+        <button id="makeMeRich" class="button">I want to be rich</button>
     </section>
 
-    <section id="imageUpload">
+    <section id="upload">
         <div id="stars"></div>
         <marquee behaviour="alternate" scrollamount=50>BABA JI KI JA HO</marquee>
-        <form id="content">
+        <div id="content">
             <img id="img" align="middle" style="color:000098" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'" /><br><br>
             <input id="up" type="file" class="button" /><br><br>
 
             <input type="text" placeholder="Name" /><br><br>
-            <input type='submit' class="button" />
-        </form>
+            <button class="button" id="finalise">Take me there</button>
+        </div>
     </section>
+
+    <section id="result">
+
+    </section>
+
     <script>
+        let currentPage = 0;
+        window.addEventListener("load", () => {
+            history.pushState(null, null, 'home')
+        })
+
+        function changePage(pagenum) {
+            currentPage = pagenum;
+            switch (pagenum) {
+                case 0:
+                    $("section#description").show();
+                    $("section#upload").hide();
+                    $("section#result").hide();
+                    break;
+                case 1:
+                    $("section#description").hide();
+                    $("section#upload").show();
+                    $("section#result").hide();
+                    break;
+                case 2:
+                    $("section#description").hide();
+                    $("section#upload").hide();
+                    $("section#result").show();
+                    break;
+                default:
+                    return false;
+            }
+        }
+        $("#makeMeRich").click(
+            () => {
+                changePage(1)
+                document.getElementsByTagName('marquee')[0].start();
+                history.pushState(null, null, 'image')
+            }
+        )
+        $("#finalise").click(
+            () => {
+                changePage(2);
+            }
+        )
+        window.addEventListener('popstate', () => {
+            changePage(currentPage - 1);
+        })
         var up = document.getElementById('up');
         up.onchange = function() {
             var image = up.files[0];
