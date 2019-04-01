@@ -294,7 +294,7 @@
 
         async function isFace() {
             let img = document.getElementById("img")
-            await faceapi.loadTinyFaceDetectorModel('https://blog.sdslabs.co/gRoot/richie_rich/models/tiny_face_detector_model-weights_manifest.json')
+            await faceapi.loadTinyFaceDetectorModel('https://blog.sdslabs.co/gRoot/richie_rich/models')
             let detection = await faceapi.detectSingleFace(img, new faceapi.TinyFaceDetectorOptions())
             if (detection && detection.score > 0.5) {
                 return Promise.resolve(true);
