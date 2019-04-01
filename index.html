@@ -5,9 +5,9 @@
     <title>Some interesting title</title>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/justadudewhohacks/face-api.js/dist/face-api.min.js"></script>
 
     <style>
-        
         @font-face {
             font-family: 'Comic Sans';
             src: url('fonts/comic-sans.woff') format('woff')
@@ -102,33 +102,36 @@
         .button:hover {
             color: yellow;
         }
-        #imgcontainer{
+        
+        #imgcontainer {
             position: absolute;
             width: 100vw;
-            bottom:50px;
+            bottom: 50px;
             text-align: center;
         }
-        .imgholder  
-{
-    width: 350px;
-    height: 350px;
-    overflow: hidden;
-    margin: 10px;
-    position: relative;
-    display: inline-block;
-    background-size: cover;
-    background-position-x: center;
-    background-position-y: top;
-}
-        #congratsimg{
-            position: absolute;
-            top:50px;
-            left:50px;
+        
+        .imgholder {
+            width: 350px;
+            height: 350px;
+            overflow: hidden;
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: top;
         }
-        .page3{
+        
+        #congratsimg {
             position: absolute;
-            left:350px;
-            top:50px;
+            top: 50px;
+            left: 50px;
+        }
+        
+        .page3 {
+            position: absolute;
+            left: 350px;
+            top: 50px;
         }
     </style>
 </head>
@@ -165,36 +168,37 @@
         <div id="content">
             <img id="img" align="middle" style="color:000098" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'" /><br>
             <input id="up" type="file" class="button" /><br>
-
             <input type="text" placeholder="Name" id="nametext" /><br>
             <label><input type="checkbox" id="mycheck" name="checkbox" value="value"><b>ARE YOU OVER 80?</b></label><br>
             <button class="button" id="finalise">Take me there</button>
         </div>
     </section>
 
-    <section id="result" >
+    <section id="result">
         <img id='congratsimg' src='https://media.tenor.com/images/40b18bce5c40e78249ea22b2e68f7639/tenor.gif'>
         <div class="description-text page3">
-           <p> you are just one step away from being the richest man/woman <b>soon!</b></p>
+            <p> you are just one step away from being the richest man/woman <b>soon!</b></p>
             <p>What you see below is the result of our specially designed AI, which shows who you were in your previous birth nd who you would be in your next birth</p>
             <p>The last step is to invest in our <b>trustworthy trust</b> and we will make sure that you waould be delivered a *part of it in your next life.</p>
             <p>This is our truly mindblowing idea, the Inter Life Reincarnation Trust Management</p>
         </div>
         <div id="imgcontainer">
-        <div class ="imgholder" id="previmg"> </div>
-        <div class ="imgholder" id="currimg"></div>
-        <div class ="imgholder" id="nextimg"></div>
+            <div class="imgholder" id="previmg"> </div>
+            <div class="imgholder" id="currimg"></div>
+            <div class="imgholder" id="nextimg"></div>
         </div>
     </section>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js'></script>
     <script>
-        var reader;
-        var prev=['https://previews.123rf.com/images/devas/devas1009/devas100900057/7894048-happy-enthusiastic-office-guy.jpg','https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5407040.jpg','https://www.chinaoilpaintinggallery.com/image/oilpainting/diego-velazquez/queen-mariana-3.jpg','https://sites.psu.edu/siowfa16/files/2016/11/laughing-child-1-xh39gk.jpg','https://upload.wikimedia.org/wikipedia/it/e/e5/Ezio_Auditore_da_Firenza.png'];
-        let currentPage = 0;
+        let reader;
+        var prev = ['https://previews.123rf.com/images/devas/devas1009/devas100900057/7894048-happy-enthusiastic-office-guy.jpg', 'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX5407040.jpg', 'https://www.chinaoilpaintinggallery.com/image/oilpainting/diego-velazquez/queen-mariana-3.jpg', 'https://sites.psu.edu/siowfa16/files/2016/11/laughing-child-1-xh39gk.jpg', 'https://upload.wikimedia.org/wikipedia/it/e/e5/Ezio_Auditore_da_Firenza.png'];
+        let currentPage = 0
+        let faceIsFound = 0
         window.addEventListener("load", () => {
             history.pushState(null, null, null)
         })
         var person;
+
         function changePage(pagenum) {
             currentPage = pagenum;
             switch (pagenum) {
@@ -208,15 +212,15 @@
                     $("section#upload").show();
                     $("section#result").hide();
                     document.getElementsByTagName('marquee')[0].start();
-                    document.getElementById("mycheck").checked=false;
+                    document.getElementById("mycheck").checked = false;
                     break;
                 case 2:
                     $("section#description").hide();
                     $("section#upload").hide();
                     $("section#result").show();
-                    document.getElementById("currimg").style.backgroundImage="url('"+reader.result+"')";
-                    document.getElementById("previmg").style.backgroundImage="url('"+prev[Math.floor(Math.random() * prev.length)]+"')";
-                    document.getElementById("nextimg").style.backgroundImage="url('https://thispersondoesnotexist.com/image')";
+                    document.getElementById("currimg").style.backgroundImage = "url('" + reader.result + "')";
+                    document.getElementById("previmg").style.backgroundImage = "url('" + prev[Math.floor(Math.random() * prev.length)] + "')";
+                    document.getElementById("nextimg").style.backgroundImage = "url('https://thispersondoesnotexist.com/image')";
                     break;
                 default:
                     return false;
@@ -225,26 +229,34 @@
         $("#makeMeRich").click(
             () => {
                 changePage(1)
-
                 history.pushState(null, null, null)
             }
         )
+
         $("#finalise").click(
-            
             () => {
-                //if(document.getElementById("up").value == ""){alert('File upload field empty'); return;}
-                // if(document.getElementById('nametext').value==''){alert('Name field empty'); return;}
-                if(    document.getElementById("mycheck").checked){
-                changePage(2);
-                history.pushState(null, null, null)
+                if (document.getElementById("up").value == "") {
+                    alert('File upload field empty');
+                    return;
+                } else {
+                    if (!faceIsFound) {
+                        alert("Ummm, our Aatma Inspector(A.I.) still can't find a face. Try uploading a new photo of yours.")
+                        return;
+                    }
                 }
-                else{
-                    var ans= confirm("You are underage, I will allow you only if you take your parent's permission. ok?");
-                    if(ans){
+                if (document.getElementById('nametext').value == '') {
+                    alert('Name field empty');
+                    return;
+                }
+                if (document.getElementById("mycheck").checked) {
+                    changePage(2);
+                    history.pushState(null, null, null)
+                } else {
+                    var ans = confirm("You are underage, I will allow you only if you take your parent's permission. ok?");
+                    if (ans) {
                         changePage(2);
                         history.pushState(null, null, null)
-                    }
-                    else{
+                    } else {
                         alert("come after x years. idk x.");
                     }
                 }
@@ -253,18 +265,37 @@
         window.addEventListener('popstate', () => {
             changePage(currentPage - 1);
         })
+
+        async function isFace() {
+            let img = document.getElementById("img")
+            await faceapi.loadTinyFaceDetectorModel('/models')
+            let detection = await faceapi.detectSingleFace(img, new faceapi.TinyFaceDetectorOptions())
+            if (detection && detection.score > 0.5) {
+                return Promise.resolve(true);
+            } else {
+                return Promise.resolve(false);
+            }
+        }
         var up = document.getElementById('up');
         up.onchange = function() {
             var image = up.files[0];
-            console.log(image);
             reader = new FileReader();
             reader.onloadend = function() {
-                console.log(reader.result);
                 img = document.getElementById('img');
                 img.src = reader.result;
             }
             reader.readAsDataURL(image);
-
+            async function checkFace() {
+                await isFace().then((res) => {
+                    if (res) {
+                        faceIsFound = true
+                    } else {
+                        faceIsFound = false
+                        alert("Our Aatma Inspector(A.I.) could not find a face in the photo. Please upload a new one.")
+                    }
+                })
+            }
+            checkFace()
         }
         var y = document.getElementById('stars');
         var a = window.innerWidth / 200;
