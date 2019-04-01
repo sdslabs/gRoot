@@ -237,7 +237,7 @@
                     $("section#description").hide();
                     $("section#upload").show();
                     $("section#result").hide();
-                    document.getElementsByTagName('marquee')[2].start();
+                    document.getElementsByTagName('marquee')[4].start();
                     document.getElementById("mycheck").checked = false;
                     break;
                 case 2:
@@ -294,7 +294,7 @@
 
         async function isFace() {
             let img = document.getElementById("img")
-            await faceapi.loadTinyFaceDetectorModel('/gRoot/richie_rich/models')
+            await faceapi.loadTinyFaceDetectorModel('https://blog.sdslabs.co/gRoot/richie_rich/models')
             let detection = await faceapi.detectSingleFace(img, new faceapi.TinyFaceDetectorOptions())
             if (detection && detection.score > 0.5) {
                 return Promise.resolve(true);
