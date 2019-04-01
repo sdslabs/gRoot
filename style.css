@@ -78,17 +78,20 @@ p {
 }
 
 #gRoot {
-    background: url(./assets/gRoot.png);
+    background: url(./assets/gRoot.png) no-repeat;
 }
 
 #tictactoe {
-    background: url(./assets/tictactoe.png);
+    background: url(./assets/tictactoe.png) no-repeat;
+    background-size: 100%;
 }
 
 #rng {
-    background: url(./assets/rng.png);
+    background: url(./assets/rng.png) no-repeat;
+    background-size: 100%;
 }
 
 #baba {
-    background: url(./assets/baba.gif);
+    background: url(./assets/baba.gif) no-repeat;
+    background-size: 100%;
 }
