@@ -11,6 +11,7 @@
         margin:0;
         background-color: #000098;
         color: yellow;
+        font-family: 'Comic Sans MS';
     }
     #content{
         text-align: center;
@@ -18,6 +19,7 @@
         top: 40%;
         margin-top: -150px;
         width: 100vw;
+        font-family: 'Comic Sans MS';
     }
     #img{
         height: 300px;
@@ -27,8 +29,8 @@
     }
     marquee{
         font-size:50px;
-        font-family: 'Comic Sans MS';
         margin-top: 30px;
+        font-family: 'Comic Sans MS';
     }
     .star{
         height:200px;
@@ -44,17 +46,32 @@
         margin:0;
         text-align:center;
     }
+    input{
+        font-family: 'Comic Sans MS';
+    }
+    .button{
+        text-decoration:underline;
+        cursor:pointer;
+        border-color: #cbcbcb #4e474e #4e474e #cbcbcb;
+        border-style: solid;
+        border-width: 10px;
+        color: 000098;
+        font-size:30px;
+    }
+    .button:hover{
+        color: yellow;
+    }
 </style>
 </head>
 <body>
     <div id="stars"></div>
     <marquee behaviour="alternate" scrollamount=50>BABA JI KI JA HO</marquee>
     <form id="content">
-    <img id="img" align="middle" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'"/><br><br>
-    <input id="up" type="file" /><br><br>
+    <img id="img" align="middle" style="color:000098" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'"/><br><br>
+    <input id="up" type="file" class="button"/><br><br>
 
-        <input type="text" placeholder="Name"/>
-        <input type='submit'/>
+        <input type="text" placeholder="Name"/><br><br>
+        <input type='submit' class="button"/>
 </form>
 <script>
 	var up = document.getElementById('up');
