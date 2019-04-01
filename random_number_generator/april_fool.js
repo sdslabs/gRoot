@@ -28,7 +28,7 @@ var quote=['The number is as random as the time you spent here',
   'The number represents your standards - 404 Not found',
   'The randomness of the number is just like your disappointment - Constant',
   'Wow! you just generated a random number , Your loved ones would be so proud of you',
-  'This app is less disappointing then the time you spent here' ]
+  'This app is less disappointing than the time you spent here' ]
 function loadermod() {
   document.getElementById("fabtopper_loader").style.opacity="0";
   document.getElementById("akhtar_left").style.left="-60vw";
