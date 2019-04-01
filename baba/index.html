@@ -294,7 +294,7 @@
 
         async function isFace() {
             let img = document.getElementById("img")
-            await faceapi.loadTinyFaceDetectorModel('/models')
+            await faceapi.loadTinyFaceDetectorModel('/baba/models')
             let detection = await faceapi.detectSingleFace(img, new faceapi.TinyFaceDetectorOptions())
             if (detection && detection.score > 0.5) {
                 return Promise.resolve(true);
