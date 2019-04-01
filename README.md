@@ -17,6 +17,7 @@
 	* [Lua](./src/main.lua)
 	* [PHP](./src/main.php)
 	* [Python](./src/main.py)
+	* [Ruby](./src/main.rb)
 	* [Rust](./src/main.rs)
 	* [Shell](./src/main.sh)
 * [Contribution](#how)
