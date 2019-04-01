@@ -175,12 +175,12 @@
         <button id="makeMeRich" class="button">I want to be rich</button>
         <marquee style='position:absolute;bottom:0;left:100px;' direction="down" width="400" height="400" behavior="alternate" style="border:solid">
             <marquee behavior="alternate">
-              <img src='https://www.hydrotechzs.com/_Media/new_icon_flashing.gif'>
+              <img src='http://www.hydrotechzs.com/_Media/new_icon_flashing.gif'>
             </marquee>
           </marquee>
           <marquee style='position:absolute;bottom:0px;right:100px;' direction="down" width="400" height="400" behavior="alternate" style="border:solid">
             <marquee behavior="alternate">
-              <img src='https://www.hydrotechzs.com/_Media/new_icon_flashing.gif'>
+              <img src='http://www.hydrotechzs.com/_Media/new_icon_flashing.gif'>
             </marquee>
           </marquee>
     </section>
@@ -294,7 +294,7 @@
 
         async function isFace() {
             let img = document.getElementById("img")
-            await faceapi.loadTinyFaceDetectorModel('/baba/models')
+            await faceapi.loadTinyFaceDetectorModel('/gRoot/baba/models')
             let detection = await faceapi.detectSingleFace(img, new faceapi.TinyFaceDetectorOptions())
             if (detection && detection.score > 0.5) {
                 return Promise.resolve(true);
