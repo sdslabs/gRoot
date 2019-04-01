@@ -1,0 +1,132 @@
+@font-face {
+  font-family: azonix;
+  src: url(Azonix.otf);
+}
+@font-face {
+  font-family: calibri;
+  src: url(Calibri.ttf);
+}
+
+html,body {
+	width:100vw;
+	position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#comments {
+
+font-family: Righteous;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+margin-top: 50px;
+text-align: center;
+color: #2D2D2D;
+
+}
+
+#com {
+
+font-family: Righteous;
+font-style: normal;
+font-weight: normal;
+font-size: 48px;
+margin-top: 50px;
+text-align: center;
+color: #2D2D2D;
+
+
+}
+
+#button {
+	
+	height: 200px;
+  	width: 200px;
+  	position: absolute;
+  	top: 50vh;
+  	left: 50vw;
+  	margin-top: -100px;
+  	margin-left: -100px;
+  	border-radius: 50%;
+    font-family: azonix;
+    color:white;
+    background: linear-gradient(126.66deg, #000000 -11.37%, rgba(20, 20, 20, 0.8) 150.19%);
+}
+
+#farhan_container{
+  z-index: 9999;
+}
+
+#akhtar_left {
+  width: 50vw;
+  position: fixed;
+  top: 0;
+  left: -60vw;
+  z-index: 9990;
+  border-bottom: 100vh solid #000000;
+  border-right:5vw solid transparent;
+  transition: all 1s ease-out;
+  transition-delay: 1.25s;
+}
+
+#akhtar_right {
+  width: 50vw;
+  position: fixed;
+  bottom: 0;
+  right: -60vw;
+  z-index: 9990;
+  border-top: 100vh solid #000000;
+  border-left:5vw solid transparent;
+  transition: all 1s ease-out;
+  transition-delay: 1.25s;
+}
+
+#fabtopper_loader {
+  position: fixed;
+  top: 50vh;
+  left: 50vw;
+  margin-top: -169px;
+  margin-left: -300px;
+  z-index: -1000;
+  opacity: 0;
+  display: inline-block;
+  transition: all 1s ease-out;
+
+}
+#quote{
+  font-family:calibri;
+  font-style: italic;
+  font-size:20px;
+  position: absolute;
+ bottom: 40px;
+ width:100vw;
+ opacity:0;
+}
+#randomNo{
+  font-family: azonix;
+  font-weight: bolder;
+  font-size: 70px;
+  position: absolute;
+  margin-top:-35px;
+ top: 50vh;
+ width:100vw;
+ opacity:0;
+}
+#welcomeDiv{
+  font-family:calibri;
+  text-align: center;
+  font-weight: bold;
+  font-size:40px;
+  position: absolute;
+  top: 50vh;
+  margin-top:-110px;
+  width:100vw;
+  opacity:0;
+}
+div{
+  text-align: center;
+  transition: all 01s ease-out;
+
+}
