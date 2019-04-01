@@ -20,6 +20,7 @@
             background-color: #000098;
             color: yellow;
             font-family: 'Comic Sans';
+            min-height: 100vh;
         }
         
         section#description {
@@ -106,7 +107,7 @@
         #imgcontainer {
             position: absolute;
             width: 100vw;
-            bottom: 50px;
+            bottom: 100px;
             text-align: center;
         }
         
@@ -123,15 +124,27 @@
         }
         
         #congratsimg {
-            position: absolute;
-            top: 50px;
-            left: 50px;
+            position: relative;
+            left:50%;
+            margin-left:-75px;
         }
         
-        .page3 {
+        .page3 p{
+            text-align: center;
+
+        }
+        .imgholder span{
+            padding:2px;
+            background-color:black;
+        }
+        #finalbutton{
+        }
+        #finala{
             position: absolute;
-            left: 350px;
-            top: 50px;
+            bottom: 20px; 
+            display: inline-block;
+            width:100%;
+            text-align: center;      
         }
     </style>
 </head>
@@ -160,6 +173,16 @@
             </p>
         </div>
         <button id="makeMeRich" class="button">I want to be rich</button>
+        <marquee style='position:absolute;bottom:0;left:100px;' direction="down" width="400" height="400" behavior="alternate" style="border:solid">
+            <marquee behavior="alternate">
+              <img src='http://www.hydrotechzs.com/_Media/new_icon_flashing.gif'>
+            </marquee>
+          </marquee>
+          <marquee style='position:absolute;bottom:0px;right:100px;' direction="down" width="400" height="400" behavior="alternate" style="border:solid">
+            <marquee behavior="alternate">
+              <img src='http://www.hydrotechzs.com/_Media/new_icon_flashing.gif'>
+            </marquee>
+          </marquee>
     </section>
 
     <section id="upload">
@@ -167,7 +190,7 @@
         <marquee behaviour="alternate" scrollamount=50>BABA JI KI JAI HO</marquee>
         <div id="content">
             <img id="img" align="middle" style="color:000098" src="#" onerror="this.src='http://www.stleos.uq.edu.au/wp-content/uploads/2016/08/image-placeholder.png'" /><br>
-            <input id="up" type="file" class="button" /><br>
+            <input id="up" type="file" acceor="image/" class="button" /><br>
             <input type="text" placeholder="Name" id="nametext" /><br>
             <label><input type="checkbox" id="mycheck" name="checkbox" value="value"><b>ARE YOU OVER 80?</b></label><br>
             <button class="button" id="finalise">Take me there</button>
@@ -175,18 +198,21 @@
     </section>
 
     <section id="result">
-        <img id='congratsimg' src='https://media.tenor.com/images/40b18bce5c40e78249ea22b2e68f7639/tenor.gif'>
-        <div class="description-text page3">
+        
+        <div class="description-text style='text-align:center;' page3">
             <p> you are just one step away from being the richest man/woman <b>soon!</b></p>
             <p>What you see below is the result of our specially designed AI, which shows who you were in your previous birth nd who you would be in your next birth</p>
             <p>The last step is to invest in our <b>trustworthy trust</b> and we will make sure that you waould be delivered a *part of it in your next life.</p>
             <p>This is our truly mindblowing idea, the Inter Life Reincarnation Trust Management</p>
+            <img id='congratsimg' src='https://media.tenor.com/images/40b18bce5c40e78249ea22b2e68f7639/tenor.gif'>
         </div>
+
         <div id="imgcontainer">
-            <div class="imgholder" id="previmg"> </div>
-            <div class="imgholder" id="currimg"></div>
-            <div class="imgholder" id="nextimg"></div>
+            <div class="imgholder" id="previmg"><span>previous birth</span> </div>
+            <div class="imgholder" id="currimg"><span>current birth</span></div>
+            <div class="imgholder" id="nextimg"><span>next birth</span></div>
         </div>
+        <a id='finala' href='https://www.sbimf.com/en-us/registration' id='finalbutton'><button class="button" >Oh yeeeeeee!</button></a>
     </section>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js'></script>
     <script>
@@ -211,7 +237,7 @@
                     $("section#description").hide();
                     $("section#upload").show();
                     $("section#result").hide();
-                    document.getElementsByTagName('marquee')[0].start();
+                    document.getElementsByTagName('marquee')[2].start();
                     document.getElementById("mycheck").checked = false;
                     break;
                 case 2:
