@@ -15,6 +15,7 @@
 	* [JavaScript](./src/main.js)
 	* [Kotlin](./src/main.kt)
 	* [Lua](./src/main.lua)
+	* [MATLAB](./src/main.m)
 	* [PHP](./src/main.php)
 	* [Python](./src/main.py)
 	* [Ruby](./src/main.rb)
