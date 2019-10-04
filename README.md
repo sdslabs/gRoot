@@ -10,6 +10,7 @@
 	* [C](./src/main.c)
 	* [C++](./src/main.cpp)
 	* [C#](./src/main.cs)
+	* [Fortran](./src/main.f95)
 	* [Go](./src/main.go)
 	* [Java](./src/main.java)
 	* [JavaScript](./src/main.js)
