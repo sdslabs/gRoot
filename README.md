@@ -11,7 +11,7 @@
 	* [C++](./src/main.cpp)
 	* [C#](./src/main.cs)
 	* [Erlang](./src/main.erl)
-  * [Fortran](./src/main.f95)
+  	* [Fortran](./src/main.f95)
 	* [Go](./src/main.go)
 	* [Java](./src/main.java)
 	* [JavaScript](./src/main.js)
