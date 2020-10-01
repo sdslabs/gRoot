@@ -20,6 +20,7 @@
 	* [MATLAB](./src/main.m)
 	* [PHP](./src/main.php)
 	* [Python](./src/main.py)
+	* [R](./src/main.r)
 	* [Rockstar](./src/main.rock)
 	* [Ruby](./src/main.rb)
 	* [Rust](./src/main.rs)
