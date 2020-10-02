@@ -7,31 +7,33 @@
 * [What is gRoot?](#what)
 * [Why is gRoot?](#why)
 * [How to use gRoot?](#setup)
-	* [C](./src/main.c)
-	* [C++](./src/main.cpp)
-	* [C#](./src/main.cs)
-	* [Erlang](./src/main.erl)
-  	* [Fortran](./src/main.f95)
-	* [Go](./src/main.go)
-	* [Java](./src/main.java)
-	* [JavaScript](./src/main.js)
-	* [Kotlin](./src/main.kt)
-	* [Lua](./src/main.lua)
-	* [MATLAB](./src/main.m)
-	* [PHP](./src/main.php)
-	* [Python](./src/main.py)
-	* [R](./src/main.r)
-	* [Rockstar](./src/main.rock)
-	* [Ruby](./src/main.rb)
-	* [Rust](./src/main.rs)
-	* [Shell](./src/main.sh)
+  * [C](./src/main.c)
+  * [C++](./src/main.cpp)
+  * [C#](./src/main.cs)
+  * [Erlang](./src/main.erl)
+  * [Fortran](./src/main.f95)
+  * [Go](./src/main.go)
+  * [Java](./src/main.java)
+  * [JavaScript](./src/main.js)
+  * [Kotlin](./src/main.kt)
+  * [Lua](./src/main.lua)
+  * [MATLAB](./src/main.m)
+  * [PHP](./src/main.php)
+  * [Python](./src/main.py)
+  * [R](./src/main.r)
+  * [Rockstar](./src/main.rock)
+  * [Ruby](./src/main.rb)
+  * [Rust](./src/main.rs)
+  * [Shell](./src/main.sh)
 * [Contribution](#how)
 * [Remarks](#remarks)
 
 ## <a name=what>What is gRoot?
+
 I am gRoot. I am gRoot. I am gRoot. I am gRoot. I am gRoot. I am gRoot. I am gRoot.
 
 #### I am gRoot :
+
 * I am gRoot
 * I am gRoot
 * I am gRoot
@@ -44,11 +46,14 @@ I am `gRoot`
 I am __gRoot__
 
 ## <a name=why>Why is gRoot?
+
 I am gRoot
 I am gRoot
 I am gRoot
 I am gRoot
+
 #### I am gRoot
+
 > I am gRoot
 > I am gRoot
 > I am gRoot
@@ -56,8 +61,10 @@ I am gRoot
 > I am gRoot
 
 ## <a name=setup>How to use gRoot?
+
 I am gRoot. I am gRoot. I am gRoot. I am gRoot
 #### I am gRoot
+
 > I am gRoot
 > I am gRoot
 > I am gRoot
@@ -65,20 +72,24 @@ I am gRoot. I am gRoot. I am gRoot. I am gRoot
 > I am gRoot
 
 ## <a name=how>Contribution?
+
 I am gRoot
 I am gRoot
 I am gRoot
 I am gRoot
+
 #### I am gRoot:
+
 * I am gRoot
-	* I am gRoot
-	* I am gRoot
-	* I am gRoot
+  * I am gRoot
+  * I am gRoot
+  * I am gRoot
 * I am gRoot
 * I am gRoot
 * I am gRoot
 
 ## <a name=remarks>Remarks
+
 I am gRoot
 I am gRoot
 I am gRoot
