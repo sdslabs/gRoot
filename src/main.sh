@@ -1,2 +1,4 @@
-#/bin/sh
+#!/bin/sh
+
 echo 'I am gRoot'
+
