@@ -10,6 +10,7 @@
   * [C](./src/main.c)
   * [C++](./src/main.cpp)
   * [C#](./src/main.cs)
+  * [Dartlang](./src/main.dart)
   * [Erlang](./src/main.erl)
   * [Fortran](./src/main.f95)
   * [Go](./src/main.go)
